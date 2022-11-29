@@ -5,5 +5,5 @@ def uppercase(str):
             addendum = 32
         else:
             addendum = 0
-        print(":c".format(ord(str[i]) - 32), end='')
+        print(":c".format(ord(str[i]) - addendum), end='')
     print()

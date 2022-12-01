@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     oper = sys.argv[2]
     opers = ['+', '-', '*', '/']
-    #if oper != '+' and oper != '-' and oper != '*' and oper != '/':
+
     if oper not in opers:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)

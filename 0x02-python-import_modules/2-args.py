@@ -5,11 +5,11 @@ if __name__ == "__main__":
     nargs = len(sys.argv) - 1
 
     if nargs == 0:
-        print("{} arguments:".format(nargs))
+        print("{} arguments.".format(nargs))
     elif nargs == 1:
-       print("{} argument:".format(nargs))
+        print("{} argument:".format(nargs))
     else:
-       print("{} arguments:".format(nargs))
+        print("{} arguments:".format(nargs))
 
     if nargs >= 1:
         nargs = 0

@@ -11,4 +11,3 @@ def no_c(my_string):
             j += 1
 
     return new_string
-

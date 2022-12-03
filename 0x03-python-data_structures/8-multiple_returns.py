@@ -6,6 +6,7 @@ def multiple_returns(sentence):
 
     if length == 0:
         char == None
-    char = sentence[0]
+    else:
+        char = sentence[0]
 
-    return length, char
+    return tup(length, char)

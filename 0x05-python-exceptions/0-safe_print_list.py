@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    num = 0
+    count = 0
 
     for i in range(x):
         try:
@@ -8,7 +8,7 @@ def safe_print_list(my_list=[], x=0):
         except:
             break
         else:
-            num += 1
+            count += 1
 
     print()
-    return num
+    return (count)

@@ -1,0 +1,10 @@
+-----------------------------
+101-lazy_matrix_mul.py module
+-----------------------------
+
+Usage: ''lazy_matrix_mul''
+
+Import function:
+    >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+

@@ -6,7 +6,7 @@ Usage ''print_square''
 ----------------------
 
 Importing function
-    >>> print_square = __import__('4-print_square.py').print_square
+    >>> print_square = __import__('4-print_square').print_square
 
 Parsing 4 as size of square
     >>> print_square(4)
@@ -16,7 +16,7 @@ Parsing 4 as size of square
     ####
 
 Parsing 0 as size of square
-    >>> print_square(4)
+    >>> print_square(0)
     
 Parsing float as size of square
     >>> print_square(4.0)

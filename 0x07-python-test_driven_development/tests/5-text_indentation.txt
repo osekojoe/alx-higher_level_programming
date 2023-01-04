@@ -44,7 +44,7 @@ Printing text with space
 
 Printing text ending with special character
     >>> text_indentation(' alx .')
-    alx
+    alx.
     <BLANKLINE>
 
 Printing special characters

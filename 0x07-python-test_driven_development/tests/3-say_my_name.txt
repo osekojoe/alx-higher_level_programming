@@ -6,23 +6,23 @@ Using ''say_my_name''
 ---------------------
 
 Import function module
-    >> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 Parsing first_name and last_name as strings
     >>> say_my_name('Joe', 'Dev')
     My name is Joe Dev
 
-Parsing first_name and last_name as strings
+Parsing only first_name
     >>> say_my_name('Joe')
     My name is Joe
 
 Parsing None as first_name
-    >>> say_my_name('None', 'Dev')
+    >>> say_my_name(None, 'Dev')
     Traceback (most recent call last):
     TypeError: first_name must be a string
 
 Parsing None as last_name
-    >>> say_my_name('Joe', 'None')
+    >>> say_my_name('Joe', None)
     Traceback (most recent call last):
     TypeError: last_name must be a string
 

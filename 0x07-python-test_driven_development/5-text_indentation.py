@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Text indentation"""
+
+
 def text_indentation(text):
     """ Function prints text with 2 new lines after each ., ? and :
     Args:
@@ -12,13 +14,13 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError('text must be a string')
 
-    txt_cp = text[:]
+    text_cp = text[:]
 
     for c in ".?:":
-        txt_list = txt_cp.split(c)
-        txt_cp = ""
-        for i in txt_list:
+        list_text = text_cp.split(c)
+        text_cp = ""
+        for i in list_text:
             i = i.strip(" ")
-            text_cp = i + c if txt_cp is "" else txt_cp + "\n\n" + i + c
+            text_cp = i + c if text_cp is "" else text_cp + "\n\n" + i + c
 
-    print(txt_cp[:-3], end="")
+    print(text_cp[:-3], end="")

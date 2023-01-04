@@ -9,61 +9,61 @@ Function import:
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
 Dividing a matrix by 2
-    >>> matrix_divided[[1, 2, 3], [4, 5,6], 2]
+    >>> matrix_divided([[1, 2, 3], [4, 5,6]], 2)
     [[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
 
 Dividing a matrix by 0
-    >>> matrix_divided[[1, 2, 3], [4, 5,6], 2]
+    >>> matrix_divided([[1, 2, 3], [4, 5,6]], 0)
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
 
 Dividing a matrix by a float number
-    >>> matrix_divided[[1, 2, 3], [4, 5, 6], 0.5]
+    >>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0.5)
     [[2.0, 4.0, 6.0], [8.0, 10.0, 12.0]]
 
 Dividing an empty matrix
-    >>> matrix_divided[[], 2]
+    >>> matrix_divided([], 2)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Dividing a tuple
-    >>> matrix_divided[(2, 4), 2]
+    >>> matrix_divided((2, 4), 2)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Dividing a matrix with rows of unequal size
-    >>> matrix_divided[[1, 2], [4, 5, 6], 0.5]
+    >>> matrix_divided([[1, 2], [4, 5, 6, 8], [10]], 0.5)
     TypeError: Each row of the matrix must have the same size
 
 Dividing a matrix with rows of unequal size    
-    >>> matrix_divided[[1, 2], [4, 5, 6], [2], 0.5]
+    >>> matrix_divided([[1, 2], [4], [6, 8]], 0.5)
     TypeError: Each row of the matrix must have the same size
 
 Dividing a non-int and non-float matrix   
-    >>> matrix_divided[['2'], ['python'], 2]
+    >>> matrix_divided([['2'], ['python']], 2)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Dividing a matrix with empty element      
-    >>> matrix_divided[[], [2, 4], 2]
+    >>> matrix_divided([[2.1, 5.8], [], [10, -3]], 8)
     Traceback (most recent call last):
-    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    TypeError: Each row of the matrix must have the same size
 
 Dividing a matrix with a tuple element
-    >>> matrix_divided[[2, 4], (2, 4), 2]
+    >>> matrix_divided([[2, 4], (2, 4)], 2)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
 Dividing a matrix with a list
-    >>> matrix_divided[[2, 4], (2, 4), [2]]
+    >>> matrix_divided([[2, 4], [2, 4]], [2])
     Traceback (most recent call last):
     TypeError: div must be a number
 
 Dividing a matrix with a string
-    >>> matrix_divided[[2, 4], (2, 4), '2']
+    >>> matrix_divided([[2, 4], [2, 4]], '2')
     Traceback (most recent call last):
     TypeError: div must be a number
 
 Dividing a matrix of negative and postive float/int numbers
-    >>> matrix_divided[[1, 2, 3.0], [4, 5, -6], 2]
+    >>> matrix_divided([[1, 2, 3.0], [4, 5, -6]], 2)
     [[0.5, 1.0, 1.5], [2.0, 2.5, -3.0]]

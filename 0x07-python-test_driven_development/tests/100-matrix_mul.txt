@@ -29,7 +29,7 @@ Multiplying two matrices (3)
 Multiplying two matrices (4)
 
     >>> matrix_mul([[1, 5, 7]], [[3], [5], [8]])
-    [[84]]
+    [[84, 0, 0]]
 
 Parsing None as a matrix
 
@@ -71,7 +71,7 @@ Parsing a list of string
    >>> matrix_mul([[]], ["Holberton"])
    Traceback (most recent call last):
    	     ...
-   TypeError: m_b must be a list of lists
+   TypeError: m_a must be a list of lists
 
 Parsing an empty matrix
 

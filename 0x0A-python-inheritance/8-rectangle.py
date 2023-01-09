@@ -11,7 +11,11 @@ class Rectangle(BaseGeometry):
     """create subclass Rectangle from class BaseGeometry"""
     def __init__(self, width, height):
         """
-        width and height: must be private + integer
+        Create and validate instances
+        weight and height: must be private & positive integer
+        Args:
+            width: width
+            height: height
         """
         self.__width = width
         self.__height = height

@@ -8,14 +8,11 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """create subclass Rectangle from class BaseGeometry"""
+    """create subclass Rectanble of BaseGeometry"""
     def __init__(self, width, height):
         """
-        Create and validate instances
-        weight and height: must be private & positive integer
-        Args:
-            width: width
-            height: height
+        width and height must be privat
+        and must be positive integer
         """
         self.__width = width
         self.__height = height

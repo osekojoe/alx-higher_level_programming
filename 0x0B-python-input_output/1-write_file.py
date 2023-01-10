@@ -13,5 +13,5 @@ def write_file(filename="", text=""):
         filename: file
         text: text to write
     """
-    with open(filename, 'w', encoding ='UTF-8') as tf:
+    with open(filename, 'w', encoding='UTF-8') as tf:
         return tf.write(text)

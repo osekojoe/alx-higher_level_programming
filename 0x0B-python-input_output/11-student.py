@@ -28,6 +28,6 @@ class Student:
         return self.__dict__.copy()
 
     def reload_from_json(self, json):
-         """ replaces all attributes of the Student instance"""
-         for i in json:
-             self.__dict__.update({i: json[i]})
+        """ replaces all attributes of the Student instance"""
+        for i in json:
+            self.__dict__.update({i: json[i]})i

@@ -4,8 +4,10 @@
 class Rectangle that inherits from Base
 """
 
+from models.base import Base
 
-class Rectangle:
+
+class Rectangle(Base):
     """
     Private instance attributes, each with its own public getter and setter:
     __width -> width
@@ -15,49 +17,49 @@ class Rectangle:
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-    """ class constructor"""
-    super().__init__(id)
-    self.width = width
-    self.height = height
-    self.x = x
-    self.y = y
+        """ class constructor"""
+        super().__init__(id)
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
-    """width getter"""
+        """width getter"""
         return self.__width
 
     @width.setter
     def width(self, value):
-    """width setter"""
-        self.__width == value
+        """width setter"""
+        self.__width = value
 
     @property
     def height(self):
-    """heighter getter"""
+        """heighter getter"""
         return self.__height
 
     @height.setter
     def height(self, value):
-    """height setter"""
+        """height setter"""
         self.__height = value
 
     @property
     def x(self):
-    """x getter"""
+        """x getter"""
         return self.__x
 
     @x.setter
     def x(self, value):
-    """x setter"""
+        """x setter"""
         self.__x = value
 
     @property
     def y(self):
-    """y getter"""
+        """y getter"""
         return self.__y
 
     @y.setter
     def y(self, value):
-    """y setter"""
+        """y setter"""
         self.__y = value

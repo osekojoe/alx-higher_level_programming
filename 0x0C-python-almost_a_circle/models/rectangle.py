@@ -107,13 +107,14 @@ class Rectangle(Base):
         """assigns an argument (1,2,3,4,5) to each attribute respectively
         > attribs: id, width, height, x, y"""
 
-        if len(args) >= 1:
-            self.id = args[0]
-        elif len(args) > 1:
-            self.width = args[1]
-        elif len(args) > 2:
-            self.height = args[2]
-        elif len(args) > 3:
-            self.x = arg[3]
-        elif len(args) > 4:
-            self.y = args[4]
+        if args is not None and len(args) != 0:
+            if len(args) >= 1:
+                self.id = args[0]
+            if len(args) > 1:
+                self.width = args[1]
+            if len(args) > 2:
+                self.height = args[2]
+            if len(args) > 3:
+                self.x = args[3]
+            if len(args) > 4:
+                self.y = args[4]

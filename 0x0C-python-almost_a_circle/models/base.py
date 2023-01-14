@@ -6,6 +6,9 @@ Class Base:
 """
 
 
+import json
+
+
 class Base:
     """Base class"""
     __nb_objects = 0

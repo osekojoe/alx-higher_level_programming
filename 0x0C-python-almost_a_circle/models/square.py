@@ -55,3 +55,10 @@ class Square(Rectangle):
                     self.x = value
                 elif key == "y":
                     self.y = value
+
+    def __str__(self):
+        """overloading __str__ method should return
+           [Square] (<id>) <x>/<y> - <size> - in our case, width or height
+        """
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+            self.y, self.width)

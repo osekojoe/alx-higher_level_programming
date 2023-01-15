@@ -7,7 +7,7 @@ Class Base:
 
 
 import json
-
+from os import path
 
 class Base:
     """Base class"""
@@ -53,22 +53,38 @@ class Base:
     @staticmethod
     def from_json_string(json_string):
         """JSON string to dictionary"""
-         if json_string is None or len(json_string) == 0:
-             return []
+        if json_string is None or len(json_string) == 0:
+            return []
 
-         return json.loads(json_string)
+        return json.loads(json_string)
 
     @classmethod
-     def create(cls, **dictionary):
-         """dictionary to instance"""
-         if cls.__name__ == 'Square':
-             dummy = cls(3)
+    def create(cls, **dictionary):
+        """dictionary to instance"""
+        if cls.__name__ == 'Square':
+            dummy = cls(3)
 
-         if cls__name__ == 'Rectangle':
-             dummy = cls(3, 3)
+        if cls.__name__ == 'Rectangle':
+            dummy = cls(3, 3)
 
-         dummy.update(**dictinary)
+        dummy.update(**dictionary)
 
-         return dummy
+        return dummy
 
+    @classmethod
+    def load_from_file(cls):
+        """file to instances"""
+        filename = cls.__name__ + '.json'
 
+        if path.exists(filename) is False:
+            return []
+
+        with open(filename, mode='r', encoding='utf-8') as f:
+            objs = cls.from_json_string(f.read())
+
+            instances = []
+
+            for elem in objs:
+                instances.append(cls.create(**elem))
+
+            return instances

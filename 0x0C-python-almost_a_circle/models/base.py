@@ -19,7 +19,7 @@ class Base:
         """
         if id is not None, assign the public instance attribute id with this
           argument value - assumption: id is an integer (not testing needed)
-        otherwise, increment __nb_objects and assign the new value to the 
+        otherwise, increment __nb_objects and assign the new value to the
          public instance attribute id
         """
         if id is not None:

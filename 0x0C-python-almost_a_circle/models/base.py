@@ -10,6 +10,7 @@ import json
 from os import path
 import csv
 
+
 class Base:
     """Base class"""
     __nb_objects = 0
@@ -18,8 +19,8 @@ class Base:
         """
         if id is not None, assign the public instance attribute id with this
           argument value - assumption: id is an integer (not testing needed)
-        otherwise, increment __nb_objects and assign the new value to the public
-          instance attribute id
+        otherwise, increment __nb_objects and assign the new value to the 
+         public instance attribute id
         """
         if id is not None:
             self.id = id
@@ -121,8 +122,48 @@ class Base:
                     column_names = ["id", "size", "x", "y"]
                 list_dicts = csv.DictReader(csvfile, fieldnames=column_names)
                 list_dicts = [dict([k, int(v)] for k, v in d.items())
-                            for d in list_dicts]
+                              for d in list_dicts]
 
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw Rectangles and Squares using the turtle module.
+        Args:
+            list_rectangles (list): A list of Rectangle objects to draw.
+            list_squares (list): A list of Square objects to draw.
+        """
+        turt = turtle.Turtle()
+        turt.screen.bgcolor("#b7312c")
+        turt.pensize(3)
+        turt.shape("turtle")
+
+        turt.color("#ffffff")
+        for rect in list_rectangles:
+            turt.showturtle()
+            turt.up()
+            turt.goto(rect.x, rect.y)
+            turt.down()
+            for i in range(2):
+                turt.forward(rect.width)
+                turt.left(90)
+                turt.forward(rect.height)
+                turt.left(90)
+            turt.hideturtle()
+
+        turt.color("#b5e3d8")
+        for sq in list_squares:
+            turt.showturtle()
+            turt.up()
+            turt.goto(sq.x, sq.y)
+            turt.down()
+            for i in range(2):
+                turt.forward(sq.width)
+                turt.left(90)
+                turt.forward(sq.height)
+                turt.left(90)
+            turt.hideturtle()
+
+        turtle.exitonclick()

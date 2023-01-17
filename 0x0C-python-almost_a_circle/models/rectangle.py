@@ -99,8 +99,8 @@ class Rectangle(Base):
     def __str__(self):
         """overriding the __str__ method so that it returns
             [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
-        _str = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
-                self.__y, self.__width, self.__height)
+        _str = "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.__x, self.__y, self.__width, self.__height)
         return _str
 
     def update(self, *args, **kwargs):
@@ -119,20 +119,20 @@ class Rectangle(Base):
             if len(args) > 4:
                 self.y = args[4]
         else:
-             for key, value in kwargs.items():
-                 if key == "id":
-                     self.id = value
-                 if key == "width":
-                     self.width = value
-                 if key == "height":
-                     self.height = value
-                 if key == "x":
-                     self.x = value
-                 if key == "y":
-                     self.y = value
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
 
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
         rect_dict = {'x': self.__x, 'y': self.__y, 'id': self.id,
-                    'height': self.__height, 'width': self.__width}
+                     'height': self.__height, 'width': self.__width}
         return rect_dict

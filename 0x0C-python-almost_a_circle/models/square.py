@@ -60,8 +60,8 @@ class Square(Rectangle):
         """overloading __str__ method should return
            [Square] (<id>) <x>/<y> - <size> - in our case, width or height
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
-            self.y, self.width)
+        return "[Square] ({}) {}/{} - {}".format(
+            self.id, self.x, self.y, self.width)
 
     def to_dictionary(self):
         """Return the dictionary representation of the Square."""

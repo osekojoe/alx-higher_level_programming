@@ -14,13 +14,11 @@ import urllib.request
 
 
 if __name__ == "__main__":
-    req = Request(sys.argv[1])
+    url = sys.argv[1]
+
+    request = urllib.request.Request(url)
     try:
-        response = urlopen(req)
-        response = response.read().decode('ascii')
-        print(response)
-    except URLError as e:
-        if hasattr(e, 'code'):
-            print('Error code: ', e.code)
-    else:
-        pass
+        with urllib.request.urlopen(request) as response:
+            print(response.read().decode("ascii"))
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code))

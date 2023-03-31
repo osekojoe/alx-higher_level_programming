@@ -9,8 +9,8 @@
 
 
 import sys
-from urllib.request import Request, urlopen
-from urllib.error import URLError
+import urllib.error
+import urllib.request
 
 
 if __name__ == "__main__":
